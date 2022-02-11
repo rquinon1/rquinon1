@@ -1,4 +1,5 @@
 on: push
+
 steps:
   - name: Hello world action
     with: # Set the secret as an input
