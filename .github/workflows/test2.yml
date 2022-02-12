@@ -6,8 +6,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: get_a_secret
-        run:
-          echo define a variable
         env: # Or as an environment variable
           super_secret: ${{ secrets.Secret001 }}
-          run: echo $super_secret
+        run: 
+            echo $super_secret
