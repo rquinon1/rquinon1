@@ -7,6 +7,6 @@ jobs:
       steps:
       - name: get_a_secret
         env: # Or as an environment variable
-          super_secret: ${{ secrets.Secret001 }}
+          super_secret: ${{ secrets.SECRET001 }}
         run: 
             echo $super_secret
