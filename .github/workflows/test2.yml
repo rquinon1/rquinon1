@@ -1,8 +1,12 @@
-on: push
-
-steps:
-  - name: Hello world action
-    with: # Set the secret as an input
-      super_secret: ${{ secrets.Secret001 }}
-    env: # Or as an environment variable
-      super_secret: ${{ secrets.Secret001 }}
+name: "my workflow 1"
+on: [push]
+jobs:
+    Job1:
+      name: get_a_secret
+      runs-on: ubuntu-latest
+      steps:
+      - name: get_a_secret
+        run:
+          echo define a variable
+        env: # Or as an environment variable
+          super_secret: ${{ secrets.Secret001 }}
