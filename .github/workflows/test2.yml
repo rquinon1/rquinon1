@@ -9,8 +9,8 @@ jobs:
         env: # Or as an environment variable
           super_secret: ${{ secrets.SECRET001 }}
         run: 
-            echo "Github will mask secret:"
-            echo $super_secret
-            echo "do this way to bypass:"
+            echo "Github will mask secret: "
+            echo ${{secrets.SECRET001}}
+            echo "do this way to bypass: "
             echo ${{secrets.SECRET001}} | sed 's/./& /g' 
 
